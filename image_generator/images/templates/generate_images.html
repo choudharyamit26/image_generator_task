@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Images</title>
+</head>
+<body>
+    <h1>Generate Images</h1>
+    <form method="POST" action="{% url 'generate_images' %}">
+        {% csrf_token %}
+        <label for="prompt1">Prompt 1:</label>
+        <input type="text" id="prompt1" name="prompt1" required><br><br>
+
+        <label for="prompt2">Prompt 2:</label>
+        <input type="text" id="prompt2" name="prompt2" required><br><br>
+
+        <label for="prompt3">Prompt 3:</label>
+        <input type="text" id="prompt3" name="prompt3" required><br><br>
+
+        <button type="submit">Generate</button>
+    </form>
+</body>
+</html>
